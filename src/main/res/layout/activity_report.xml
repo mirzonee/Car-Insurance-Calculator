@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Display page report title -->
+    <TextView
+        android:id="@+id/textViewReportTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Car Insurance Details"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"/>
+
+    <!-- Display user input details -->
+
+    <TextView
+        android:id="@+id/textViewSumInsuredReport"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Sum Insured: "
+        android:textSize="18sp"
+        android:layout_below="@+id/textViewReportTitle"
+        android:layout_marginTop="16dp"
+        android:layout_marginLeft="16dp"/>
+
+    <TextView
+        android:id="@+id/textViewEngineSizeReport"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Engine Size(cc): "
+        android:textSize="18sp"
+        android:layout_below="@+id/textViewSumInsuredReport"
+        android:layout_marginTop="16dp"
+        android:layout_marginLeft="16dp"/>
+
+    <TextView
+        android:id="@+id/textViewCoverageTypeReport"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Coverage Type: "
+        android:textSize="18sp"
+        android:layout_below="@+id/textViewEngineSizeReport"
+        android:layout_marginTop="16dp"
+        android:layout_marginLeft="16dp"/>
+
+    <TextView
+        android:id="@+id/textViewNCDReport"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="NCD(%): "
+        android:textSize="18sp"
+        android:layout_below="@+id/textViewCoverageTypeReport"
+        android:layout_marginTop="16dp"
+        android:layout_marginLeft="16dp"/>
+
+    <TextView
+        android:id="@+id/textViewWindScreenReport"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Windscreen(Additional): "
+        android:textSize="18sp"
+        android:layout_below="@+id/textViewNCDReport"
+        android:layout_marginTop="16dp"
+        android:layout_marginLeft="16dp"/>
+
+    <TextView
+        android:id="@+id/textViewTotalPayment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Total Payment: RM "
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:layout_below="@+id/textViewWindScreenReport"
+        android:layout_marginTop="16dp"
+        android:layout_marginLeft="16dp"/>
+
+    <!-- Confirm Payment button -->
+    <Button
+        android:id="@+id/buttonConfirmPaymentInReport"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Go to Payment"
+        android:layout_below="@+id/textViewTotalPayment"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="24dp" />
+
+    <!-- Generate PDF button -->
+    <Button
+        android:id="@+id/buttonGeneratePDF"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Generate PDF Report"
+        android:layout_below="@+id/buttonConfirmPaymentInReport"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"/>
+
+    <!-- Payment Success/Fail Message -->
+    <TextView
+        android:id="@+id/successMessage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25sp"
+        android:layout_marginLeft="25sp"
+        android:layout_below="@+id/buttonGeneratePDF"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        android:onClick="successMessage"/>
+
+
+</RelativeLayout>

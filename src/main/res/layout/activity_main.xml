@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:columnCount="2"
+    android:rowCount="7"
+    android:padding="16dp"
+    android:columnOrderPreserved="false">
+
+    <!-- Top Title TextView -->
+    <TextView
+        android:id="@+id/textViewTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Car Insurance Premium Calculator"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        android:gravity="center" />
+
+    <!-- RadioGroup for Malaysia Region -->
+    <TextView
+        android:text="Region"
+        android:layout_rowSpan="1"
+        android:layout_columnSpan="2"
+        android:textStyle="bold"/>
+    <RadioGroup
+        android:id="@+id/radioGroupRegion"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textViewTitle"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/radioButtonWestMalaysia"
+            android:text="West Malaysia"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <RadioButton
+            android:id="@+id/radioButtonEastMalaysia"
+            android:text="East Malaysia"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+    </RadioGroup>
+
+    <!-- Sum Insured -->
+    <TextView
+        android:text="Market Value (sum insured)"
+        android:layout_rowSpan="1"
+        android:layout_columnSpan="2"
+        android:textStyle="bold"/>
+    <EditText
+        android:id="@+id/editTextSumInsured"
+        android:layout_rowSpan="1"
+        android:layout_columnSpan="2"
+        android:hint="Enter value (RM)"
+        android:inputType="number"/>
+
+    <!-- Engine Size -->
+    <TextView
+        android:text="Engine Size (cc)"
+        android:layout_rowSpan="1"
+        android:layout_columnSpan="2"
+        android:textStyle="bold"/>
+    <EditText
+        android:id="@+id/editTextEngineSize"
+        android:layout_rowSpan="1"
+        android:layout_columnSpan="2"
+        android:hint="Enter engine size"
+        android:inputType="number"/>
+
+    <!-- Coverage Type -->
+    <TextView
+        android:text="Coverage Type"
+        android:layout_rowSpan="1"
+        android:layout_columnSpan="2"
+        android:textStyle="bold"/>
+    <RadioGroup
+        android:id="@+id/radioGroupCoverage"
+        android:layout_rowSpan="1"
+        android:layout_columnSpan="2"
+        android:orientation="horizontal">
+        <RadioButton
+            android:id="@+id/radioButtonFirstParty"
+            android:text="First Party"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <RadioButton
+            android:id="@+id/radioButtonThirdParty"
+            android:text="Third Party"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+    </RadioGroup>
+
+    <!-- NCD -->
+    <TextView
+        android:text="NCD (%)"
+        android:layout_rowSpan="1"
+        android:layout_columnSpan="2"
+        android:layout_gravity="left"
+        android:textStyle="bold"/>
+    <Spinner
+        android:id="@+id/spinnerNCD"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_centerHorizontal="true"
+        android:entries="@array/ncd_options"/>
+
+    <!-- Windscreen Cover -->
+    <Switch
+        android:id="@+id/swWindscreenCover"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_rowSpan="1"
+        android:layout_column="0"
+        android:layout_columnSpan="2"
+        android:text="Add Windscreen Cover"
+        android:textColor="#808080"
+        android:layout_gravity="center"
+        android:layout_marginTop="15dp"
+        android:checked="false"/>
+
+    <!-- Calculate Button -->
+    <Button
+        android:id="@+id/buttonCalculate"
+        android:text="Calculate"
+        android:layout_gravity="center"
+        android:layout_rowSpan="1"
+        android:layout_columnSpan="2"
+        android:layout_marginBottom="150dp"
+        android:onClick="calculatePremium"/>
+
+</GridLayout>
