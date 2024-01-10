@@ -38,7 +38,7 @@ Consider the following example:
 
 The sum insured will be the market value of the car.
 
-![Car Insurance Calculator](https://github.com/yourusername/yourrepository/blob/main/images/car_insurance_calculator.png)
+![Car Insurance Calculator](Screenshot 2024-01-11 022745.png)
 
 
 **Note:** Please refer to the detailed Private Car Schedule of Premiums (Table 1) for comprehensive rates.
